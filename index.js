@@ -32,6 +32,17 @@ const swaggerOptions = {
 const swaggerDocs = swaggerJsDoc(swaggerOptions);
 app.use('/api/v1/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
+app.get('/', (req, res) => {
+    res.send(`
+        <div style="font-family: sans-serif; text-align: center; padding-top: 50px;">
+            <h1>📚 NaijaReads API</h1>
+            <p>The server is running successfully!</p>
+            <p>To view the interactive documentation, go to:</p>
+            <a href="/api/v1/docs" style="background: #007bff; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">View API Documentation</a>
+        </div>
+    `);
+});
+
 app.use(express.json()); 
 app.use('/api/v1/books', router);
 
