@@ -43,7 +43,14 @@ npm run dev
 
 # For production
 npm start
-🛣️ API EndpointsMethodEndpointDescriptionGET/api/v1/booksFetch all books in the storePOST/api/v1/booksAdd a new book to the databaseGET/api/v1/books/:idGet details of a specific bookPATCH/api/v1/books/:idUpdate book details (price, stock, etc.)DELETE/api/v1/books/:idRemove a book from the store📖 Database Schema SampleJSON{
+🛣️ API EndpointsMethodEndpointDescription
+GET/api/v1/books     Fetch all books in the store
+POST/api/v1/books    Add a new book to the database
+GET/api/v1/books/:id     Get details of a specific book
+PATCH/api/v1/books/:id     Update book details (price, stock, etc.)
+DELETE/api/v1/books/:id       Remove a book from the store📖
+
+Database Schema SampleJSON {
   "title": "Things Fall Apart",
   "author": {
     "firstName": "Chinua",
